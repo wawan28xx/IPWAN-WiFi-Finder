@@ -2,9 +2,10 @@ import os
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
-# Rentang IP
-base_ip = "172.18.1." #ganti rentang IP WAN Wi-Fi
-ip_range = range(1, 255)  # 1-254
+# === KONFIGURASI TARGET ===
+base_ip = "172.18.1."      # 3 oktet pertama dari subnet target
+ip_range = range(1, 255)   # Rentang untuk oktet terakhir (misal: 1-254)
+# ==========================
 
 # Fungsi ping
 def ping(ip):
